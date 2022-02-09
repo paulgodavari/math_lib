@@ -13,13 +13,13 @@
 //--------------------------------------------------------------------------------------------------
 // Utility functions
 
-static const float kErrorMargin = 0.000001;
+static const float kDefaultErrorMargin = 0.000001;
 
-bool WithinMarginOfError(float test_value, float expected_value)
+bool WithinMarginOfError(float test_value, float expected_value, float error_margin = kDefaultErrorMargin)
 {
     bool result = false;
-    if ((test_value >= (expected_value - kErrorMargin)) &&
-        (test_value <= (expected_value + kErrorMargin))) {
+    if ((test_value >= (expected_value - error_margin)) &&
+        (test_value <= (expected_value + error_margin))) {
         result = true;
     }
     return result;
