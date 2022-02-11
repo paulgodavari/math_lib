@@ -7,7 +7,8 @@
 #import <XCTest/XCTest.h>
 
 
-#include "math_lib/math_lib.h"
+#include "math_lib/vector.h"
+#include "math_lib/matrix.h"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -60,5 +61,19 @@ bool WithinMarginOfError(float test_value, float expected_value, float error_mar
     float magnitude = unit.Magnitude();
     XCTAssertTrue(WithinMarginOfError(magnitude, 1.0));
 }
+
+
+- (void) testMatrix2x2Init
+{
+    matrix2x2 m2 = {
+        1, 2, 3, 4
+    };
+    
+    XCTAssertTrue(m2.data[0][0] == 1.0f);
+    XCTAssertTrue(m2.data[0][1] == 2.0f);
+    XCTAssertTrue(m2.data[1][0] == 3.0f);
+    XCTAssertTrue(m2.data[1][1] == 4.0f);
+}
+
 
 @end

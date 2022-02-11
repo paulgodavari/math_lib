@@ -13,7 +13,8 @@
 /* Begin PBXFileReference section */
 		668472C827B47D83004972E9 /* MathLibTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathLibTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		668472CB27B47D83004972E9 /* MathLibTest.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MathLibTest.mm; sourceTree = "<group>"; };
-		668472D027B47FA0004972E9 /* math_lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = math_lib.h; path = ../math_lib/math_lib.h; sourceTree = "<group>"; };
+		668472D027B47FA0004972E9 /* vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = vector.h; path = ../math_lib/vector.h; sourceTree = "<group>"; };
+		668472D127B4BAF3004972E9 /* matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = matrix.h; path = ../math_lib/matrix.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +31,8 @@
 		668472BD27B47D56004972E9 = {
 			isa = PBXGroup;
 			children = (
-				668472D027B47FA0004972E9 /* math_lib.h */,
+				668472D027B47FA0004972E9 /* vector.h */,
+				668472D127B4BAF3004972E9 /* matrix.h */,
 				668472CA27B47D83004972E9 /* MathLibTest */,
 				668472C927B47D83004972E9 /* Products */,
 			);

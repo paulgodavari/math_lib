@@ -1,4 +1,4 @@
-// math_lib.h
+// vector.h
 // math_lib
 //
 // Copyright (c) 2022 Paul Godavari. All rights reserved. 
