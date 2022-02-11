@@ -70,6 +70,12 @@ inline v2 UnitVector(const v2& vec)
     return result;
 }
 
+inline float Dot(const v2& lhs, const v2& rhs)
+{
+    float result = lhs.x * rhs.x + lhs.y * rhs.y;
+    return result;
+}
+
 inline v2& v2::operator +=(const v2& arg)
 {
     x += arg.x;
@@ -150,6 +156,12 @@ inline v3 operator /(const v3& vec, float divisor)
 inline v3 UnitVector(const v3& vec)
 {
     v3 result = vec / vec.Magnitude();
+    return result;
+}
+
+inline float Dot(const v3& lhs, const v3& rhs)
+{
+    float result = lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z;
     return result;
 }
 
@@ -242,6 +254,12 @@ inline v4 operator /(const v4& vec, float divisor)
 inline v4 UnitVector(const v4& vec)
 {
     v4 result = vec / vec.Magnitude();
+    return result;
+}
+
+inline float Dot(const v4& lhs, const v4& rhs)
+{
+    float result = lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z + lhs.w * rhs.w;
     return result;
 }
 
