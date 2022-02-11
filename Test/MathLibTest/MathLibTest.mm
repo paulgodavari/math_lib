@@ -62,6 +62,18 @@ bool WithinMarginOfError(float test_value, float expected_value, float error_mar
     XCTAssertTrue(WithinMarginOfError(magnitude, 1.0));
 }
 
+- (void) testVector3CrossProduct
+{
+    v3 x = { 1.0, 0.0, 0.0 };
+    v3 y = { 0.0, 1.0, 0.0 };
+    
+    v3 cross = Cross(x, y);
+
+    v3 expected = { 0.0, 0.0, 1.0 };
+    XCTAssertTrue(WithinMarginOfError(cross.x, expected.x));
+    XCTAssertTrue(WithinMarginOfError(cross.y, expected.y));
+    XCTAssertTrue(WithinMarginOfError(cross.z, expected.z));
+}
 
 - (void) testMatrix2x2Init
 {

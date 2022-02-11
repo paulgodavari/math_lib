@@ -165,6 +165,16 @@ inline float Dot(const v3& lhs, const v3& rhs)
     return result;
 }
 
+inline v3 Cross(const v3& lhs, const v3& rhs)
+{
+    v3 result = {};
+    result.x = lhs.y * rhs.z - lhs.z * rhs.y;
+    result.y = lhs.z * rhs.x - lhs.x * rhs.z;
+    result.z = lhs.x * rhs.y - lhs.y * rhs.x;
+    return result;
+}
+
+
 inline v3& v3::operator +=(const v3& arg)
 {
     x += arg.x;
